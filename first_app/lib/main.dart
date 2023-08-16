@@ -28,8 +28,7 @@ class FinTechExplainedApp extends StatelessWidget {
       title: 'FinTechExplainedApp',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-              'Welcome to FinTechExplainedApp Profiles RestAPI Example'),
+          title: const Text('Welcome Profiles RestAPI Example'),
         ),
         body: const Center(
           child: FinTechExplainedProfilesWidget(),
@@ -53,7 +52,8 @@ class _FinTechExplainedProfilesWidgetState
   final _biggerFont = const TextStyle(fontSize: 18);
   final profile_box = TextEditingController();
   late Future futureProfiles;
-  String serviceURL = "http://localhost:8000/";
+  // String serviceURL = "http://localhost:8000/";
+  String serviceURL = "http://10.0.2.2:8000/"; // Use the appropriate address
 
   Future<List<Profile>> getProfiles() async {
     List<Profile> profiles = [];
